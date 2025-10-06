@@ -9,7 +9,7 @@ import string
 import lyricsgenius
 import unicodedata
 
-genius = lyricsgenius.Genius("79bSVlRX4YEmwomC2oIp_jiWPiGliEtArd2dsIlisD4NfHPPVuRdp-skYhQKmfgn", remove_section_headers=False)
+genius = lyricsgenius.Genius("y6p88Ng90g0iKj0Ygxa0oA-sFDPekToxKXe974xRviBKbJcYYuGNcBSUntWX2_eX", remove_section_headers=False)
 # artist = genius.search_artist("Taylor Swift", max_songs=1)
 # songs = artist.songs
 # for song in songs:
@@ -53,7 +53,7 @@ def getLyrics(title, artist):
     return "Lyrics not found"
 
 def searchMulti(term):
-    data = genius.search(search_term=term, per_page=9, type_='song')
+    data = genius.search(search_term=term, per_page=9, type_='song') # causing problems, response status code: 403
 
     songs = []
 

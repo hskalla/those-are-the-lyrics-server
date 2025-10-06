@@ -4,6 +4,8 @@
 # flask run --port=5001 --debug
 #
 
+# static IP address (via proximo) is 54.221.205.107
+
 # from typing_extensions import Self
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
