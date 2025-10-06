@@ -1,4 +1,6 @@
 gunicorn
+azapi
+waitress
 beautifulsoup4==4.13.5
 blinker==1.9.0
 cached-property==2.0.1

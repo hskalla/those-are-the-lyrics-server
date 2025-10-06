@@ -10,6 +10,7 @@
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from genius import *
+from azapi import *
 
 # instantiate the app
 app = Flask(__name__)
@@ -28,6 +29,10 @@ def index():
 @app.route('/ping', methods=['GET', 'POST'])
 def ping_pong():
     return jsonify('pong!')
+
+@app.route('/test', methods=['GET', 'POST'])
+def test():
+    return jsonify(az_search("Bad Blood", "Taylor Swift"))
 
     ### GENIUS API ROUTES
 # calls the getLyrics function from genius.py; returns the lyrics and cover of the song
